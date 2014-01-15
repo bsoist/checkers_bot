@@ -130,14 +130,6 @@ public class Human extends Player {
 						waypointStrings[i] = inputLine.substring(3*i,3*(i+1));
 					}
 					boolean validMove = true;
-					//CORBIN IS WORKING HERE
-					//for (String waypointString : waypointStrings) {
-						//could also test if first two characters are numbers
-						//if (waypointString.substring(2) == " ") {
-							//System.out.println(waypointString);
-							//validMove = false; 
-						//}
-					//}
 					if (validMove) {
 						for (int i=0; i<numberOfWaypoints; i++) {
 							allWaypoints[i] = new int[] {Integer.parseInt(inputLine.substring(3*i, 3*i+1)),Integer.parseInt(inputLine.substring(3*i+1, 3*i+2))};
