@@ -43,29 +43,13 @@ public class Piece {
 		ArrayList<Move> result = new ArrayList<Move>();
 		//gets array of all sets of waypoints
 		int[][][] allWaypoints = this.getMovesFromLocation(this.location, this.parentBoard, false);
-		//iterates
+		//iterates through each ser
 		for (int[][] theWaypoints : allWaypoints) {
 			//creates move and adds to return string
 			result.add(new Move(this, theWaypoints));
 		}
 		//returns final result
-		boolean canJump = false;
-		for (Move move : result) {
-			if (move.getJumpsContained()>0) {
-				canJump = true;
-				break;
-			}
-		}
-		if (!canJump) {
-			return result.toArray(new Move[result.size()]);
-		}
-		else {
-			ArrayList<Move> modifiedResult = new ArrayList<Move>();
-			for (Move move : result) {
-				modifiedResult.add(move);
-			}
-			return modifiedResult.toArray(new Move[modifiedResult.size()]);
-		}
+		return result.toArray(new Move[result.size()]);
 	}
 
 	public int[][][] getMovesFromLocation (int[] pieceLocation, Board b, boolean mustBeJump) {
