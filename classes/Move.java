@@ -84,50 +84,5 @@ public class Move {
 			return true;
 		}
 		return false;
-
-
-		// outerloop:
-		// for (int i=0; i<this.waypoints.length-1; i++) {
-		// 	int[] start = this.waypoints[i];
-		// 	int[] end = this.waypoints[i+1];
-		// 	int[] midpoint = new int[]{(end[0]+start[0])/2,(end[1]+start[1])/2};
-		// 	int[] displacement = new int[] {end[0]-start[0],end[1]-start[1]};
-		// 	if (!this.movePiece.getIsKing()) {
-		// 		if (thePlayer.getIsOnZeroSide()) {
-		// 			if ((displacement[0]==1||displacement[0]==-1) && displacement[1]==1 && theBoard.getPieceAtLocation(end)==null && Board.locationIsInBounds(end)) {
-		// 				//intentionally empty
-		// 			}
-		// 			else if ((displacement[0]==2||displacement[0]==-2)&&displacement[1]==2&&theBoard.getPieceAtLocation(end)==null&&theBoard.getPieceAtLocation(midpoint)!=null&&theBoard.getPieceAtLocation(midpoint).getPlayer()!=thePlayer&&Board.locationIsInBounds(end)) {
-		// 				//intentionally empty
-		// 			}
-		// 			else {
-		// 				return false;
-		// 			}
-		// 		}
-		// 		else {
-		// 			if ((displacement[0]==1||displacement[0]==-1)&&displacement[1]==-1&&theBoard.getPieceAtLocation(end)==null&&Board.locationIsInBounds(end)) {
-		// 				//intentionally empty
-		// 			}
-		// 			else if ((displacement[0]==2||displacement[0]==-2)&&displacement[1]==-2&&theBoard.getPieceAtLocation(end)==null&&theBoard.getPieceAtLocation(midpoint)!=null&&theBoard.getPieceAtLocation(midpoint).getPlayer()!=thePlayer&&Board.locationIsInBounds(end)) {
-		// 				//intentionally empty
-		// 			}
-		// 			else {
-		// 				return false;
-		// 			}
-		// 		}
-		// 	}
-		// 	else {
-		// 		if ((displacement[0]==1||displacement[0]==-1)&&(displacement[1]==1||displacement[1]==-1)&&theBoard.getPieceAtLocation(end)==null&&Board.locationIsInBounds(end)) {
-		// 			//intentionally empty
-		// 		}
-		// 		else if ((displacement[0]==2||displacement[0]==-2)&&(displacement[1]==2||displacement[1]==-2)&&theBoard.getPieceAtLocation(end)==null&&theBoard.getPieceAtLocation(midpoint)!=null&&theBoard.getPieceAtLocation(midpoint).getPlayer()!=thePlayer&&Board.locationIsInBounds(end)) {
-		// 			//intentionally empty
-		// 		}
-		// 		else {
-		// 			return false;
-		// 		}
-		// 	}
-		// }
-		// return true;
 	}
 }
